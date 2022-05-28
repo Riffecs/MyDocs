@@ -1,0 +1,232 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{url}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Jonathan Skopp}
+\tagline{Student der Informatik}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+%%\photoR{2.5cm}{mmayer-wikipedia-cc-by-2_0}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{jonathan.skopp@gmail.com}
+%   \phone{000-00-0000}
+  \mailaddress{Weimarer Straße 81, 98693 Ilmenau}
+  \linkedin{jonathan-skopp-556a231a1}\\
+  \github{Riffecs}
+  \twitter{jskopp98}
+
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Erfahrungen}
+
+\cvevent{Besuch ausgewählter Module der Mathematik
+}{Fernuniversität Hagen
+}{April 2020 – April 2022 }{Hagen, NRW}
+\begin{itemize}
+\item Einschreibung in den Bachelor Studiengang Mathematik
+\item Besuch diverser mathematischer Praktika
+\end{itemize}
+
+
+\divider
+
+\cvevent{Abitur mit Schwerpunkt Datenverarbeitung
+}{Andreas Gordon Kompetenzzentrum Erfurt
+}{Juli 2015 – Juli 2018}{Erfurt, THÜ}
+\begin{itemize}
+\item Wahl des Nebenfaches Datenverarbeitung
+\item Erstellung eines Programms zur asymmetrischen Verschlüsselung von
+Dateien (Java)
+\item Vermittlung grundlegender Elemente des 3D-Drucks
+\item Vermittlung grundlegender Elemente der Softwarearchitektur
+\end{itemize}
+
+\divider
+
+\cvevent{Ehrenamtlicher Vorstand der Thüringer Schachjugend
+}{Thüringer Schachjugend}{Februar 2021 – März 2022}{Erfurt, THÜ}
+\begin{itemize}
+\item Ausrichten der Thüringer Meisterschaft
+\item Verwalten des Kinder- und Jugendtrainings im Land
+
+\end{itemize}
+
+\divider
+
+\cvevent{Ehrenamtliches Kinder- und Jugendtraining}{SV Empor Erfurt e.V., Abt. Schach
+}{April 2015 – April 2019 }{Erfurt, THÜ}
+\begin{itemize}
+\item Betreuung von Mannschaften bei der deutschen Schulmeisterschaft
+\item Grundlagenausbildung im Leistungssport Schach
+\item Erreichen einer C-Trainer Ausbildung im Schach sowie einer\\ \mbox{Schiedsrichterlizenz}
+\end{itemize}
+
+\divider
+
+
+
+\cvevent{Verwaltung des Streams von GM Niclas Huschenbeth
+}{Twitch / Discord
+}{Juli 2020 – April 2022}{online}
+\begin{itemize}
+\item Moderation des Streamchats
+\item Verwaltung und Erstellung von SubBattles
+\item Verwaltung von Servern und einer Cloud
+\end{itemize}
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Lebensweisheit}
+\begin{quote}
+``We don’t have to know what tomorrow holds! That’s why we can live for everything we’re worth today.''
+\end{quote}
+
+
+\cvsection{Skills}
+
+\cvtag{Java}
+\cvtag{Rust}
+\cvtag{Python}
+\cvtag{Julia}
+\cvtag{Go}
+\cvtag{C++}
+\cvtag{C\#}
+\cvtag{Matlab}
+\cvtag{NodeJS}
+\cvtag{\LaTeX}
+
+
+\divider\smallskip
+
+\cvtag{Führerschein}
+\cvtag{Microsoft Office}\\
+\cvtag{C-Trainer Schach}
+
+
+\cvsection{Sprachen}
+
+\cvskill{Deutsch}{5}
+% \divider
+
+\cvskill{Englisch}{2} %% supports X.5 values.
+
+
+\cvsection{Werdegang}
+
+\cvevent{Studium Informatik}{Technische Universität Ilmenau}{Oktober 2018 – *}{}
+
+\divider
+
+\cvevent{Abitur mit Schwerpunkt Datenverarbeitung}{Andreas Gordon Kompetenzzentrum Erfurt
+}{Juli 2015 – Juli 2018}{}
+
+\cvsection{Veröffentlichungen}
+\begin{itemize}
+    \item Grundlagen der Kryptografie (Seminarfacharbeit)
+    %% \item Summe der natürlichen Zahlen 
+\end{itemize}
+
+\cvsection{Softwareprojekte}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Softwareprojekte}}, type=article]
+
+
+\begin{itemize}
+    \item Python Lichess Wrapper
+    \begin{itemize}
+        \item \url{https://github.com/Riffecs/lichesspy}
+    \end{itemize}
+    \item Java Crypt Module (RSA)
+    \begin{itemize}
+        \item \url{https://github.com/Riffecs/JavaCrypt}
+    \end{itemize}
+    \item Python Package Manager für die X-FAB (Client und Server)
+    \begin{itemize}
+        \item \url{https://github.com/Riffecs/rion}
+         \item \url{https://github.com/Riffecs/inor}
+    \end{itemize}
+    \item Simple Unity (C\#) Game (Work in progress)
+    \begin{itemize}
+        \item \url{https://github.com/Riffecs/Griff}
+    \end{itemize}
+    
+\end{itemize}
+
+\end{paracol}
+
+\end{document}
